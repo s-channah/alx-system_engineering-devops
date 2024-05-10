@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Bash script that listens on port 98 on localhost
+
+#after creating such script thatb holds command which listens to port 98
+#sudo execute this script
+#then with telnet command on another terminal, connect localhost on port 98
+#Type something on this terminal and check if it reflected on initial terminal
+
+
+nc -l -p 98

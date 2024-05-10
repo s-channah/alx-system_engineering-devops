@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
-#Bash script that listens on port 98 on localhost
+#Script that displays all active IPv4 addresses 
 
-#after creating such script thatb holds command which listens to port 98
-#sudo execute this script
-#then with telnet command on another terminal, connect localhost on port 98
-#Type something on this terminal and check if it reflected on initial terminal
+#ifconfig is a command that details active network interfaces
+#Part of the details of active interfaces listed is the IP addresses
+#Which can be found at the seconnd field on lines starting with 'inet'
 
-
-nc -l -p 98
+ifconfig | grep 'inet ' | grep -v 'inet6' | awk '{print $2}'
